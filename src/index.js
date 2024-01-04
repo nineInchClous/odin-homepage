@@ -3,6 +3,4 @@ import './css/styles.scss';
 
 // #endregion
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-});
+document.addEventListener('DOMContentLoaded', () => {});
