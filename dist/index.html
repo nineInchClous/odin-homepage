@@ -237,26 +237,29 @@
           Please get in touch if you think our work could be mutually
           beneficial!
         </p>
-        <p class="contact-infos">1234 Random Road</p>
-        <p class="contact-infos">Random Town, California 12345</p>
-        <p class="contact-infos">555-555-5555</p>
-        <p class="contact-infos">john.doe@mail.com</p>
-        <div class="links-container">
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-x-twitter"></i>
+        <div class="contact-info-container">
+          <p class="contact-info">1234 Random Road</p>
+          <p class="contact-info">Random Town, California 12345</p>
+          <p class="contact-info">555-555-5555</p>
+          <p class="contact-info">john.doe@mail.com</p>
         </div>
-        <img
-          src="./img/contact-l.jpg"
-          alt=""
-          srcset="
-            ./img/contact-l.jpg 1920w,
-            ./img/contact-m.jpg 1280w,
-            ./img/contact-s.jpg  640w
-          "
-          sizes="100vw"
-        />
+        <div class="links-container">
+          <a href="https://github.com/nineInchClous" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://ca.linkedin.com/in/thibault-castelli" target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://twitter.com/?lang=en-ca" target="_blank"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </div>
       </section>
+      <picture>
+        <source media="(min-width: 1000px)" srcset="./img/contact-l.jpg" />
+        <source media="(min-width: 600px)" srcset="./img/contact-m.jpg" />
+        <img src="./img/contact-s.jpg" alt="" />
+      </picture>
     </footer>
   </body>
 </html>

@@ -33,6 +33,23 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $black;
 }
+header,
+footer {
+  background-color: #0891b2;
+  color: white;
+
+  p {
+    color: whitesmoke;
+  }
+
+  a {
+    color: whitesmoke;
+
+    &:hover {
+      border-bottom-color: whitesmoke;
+    }
+  }
+}
 h1,
 h2,
 h3,
@@ -46,6 +63,9 @@ h1 {
 }
 h2 {
   font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
 }
 h3 {
   font-size: 1.7rem;
@@ -57,6 +77,7 @@ p {
 }
 img {
   max-width: 100%;
+  display: block;
 }
 a {
   color: $black;
@@ -73,12 +94,15 @@ a {
     outline: none;
   }
 }
+section {
+  padding: 15px;
+}
 
 .img-text {
   position: relative;
-  padding: 5px;
   display: flex;
   justify-content: center;
+  padding: 5px;
 
   h1 {
     position: absolute;
@@ -106,23 +130,8 @@ a {
   }
 }
 
-.about-sect {
-  padding: 15px;
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
-    margin-top: 25px;
-  }
-}
-
 .my-work-sect {
   margin-top: 25px;
-  padding: 15px;
-
-  h2 {
-    margin-bottom: 10px;
-    text-align: center;
-  }
 
   .project-container {
     box-shadow: $shadow;
@@ -130,6 +139,7 @@ a {
 
     img {
       height: 250px;
+      width: 100%;
       object-fit: cover;
     }
 
@@ -153,6 +163,20 @@ a {
 
     .project-main {
       padding: 10px;
+    }
+  }
+}
+
+.contact-sect {
+  .contact-info-container {
+    margin-top: 20px;
+    .contact-info {
+      font-style: italic;
+      font-size: 0.9rem;
+
+      &:nth-child(3) {
+        margin-top: 20px;
+      }
     }
   }
 }
