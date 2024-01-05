@@ -8,6 +8,7 @@
 
 $black: #333;
 $gray: #555;
+$shadow: 0 0 3px #333;
 
 *,
 *::after,
@@ -47,7 +48,7 @@ h2 {
   font-size: 3rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 p {
   line-height: 1.4;
@@ -57,29 +58,39 @@ p {
 img {
   max-width: 100%;
 }
+a {
+  color: $black;
+  border-bottom: 2px solid transparent;
+  opacity: 0.8;
+  transition:
+    border-color 200ms ease-in-out,
+    opacity 200ms ease-in-out;
 
-.about-sect {
-  padding: 10px;
-  h2 {
-    text-align: center;
-    margin-bottom: 10px;
+  &:hover,
+  &:focus {
+    border-color: $black;
+    opacity: 1;
+    outline: none;
   }
 }
 
 .img-text {
   position: relative;
-  padding: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
 
   h1 {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
+    bottom: 25px;
+    width: 300px;
+    text-align: center;
     color: white;
     text-shadow: 2px 2px 2px rgba(51, 51, 51, 0.6);
   }
 
   img {
-    box-shadow: 0 0 3px #333;
+    box-shadow: $shadow;
   }
 }
 
@@ -91,19 +102,57 @@ img {
   a {
     font-size: 2rem;
     margin: 0 5px;
-    color: $black;
-    border-bottom: 2px solid transparent;
     padding: 5px;
-    opacity: 0.8;
-    transition:
-      border-color 200ms ease-in-out,
-      opacity 200ms ease-in-out;
+  }
+}
 
-    &:hover,
-    &:focus {
-      border-color: $black;
-      opacity: 1;
-      outline: none;
+.about-sect {
+  padding: 15px;
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+}
+
+.my-work-sect {
+  margin-top: 25px;
+  padding: 15px;
+
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .project-container {
+    box-shadow: $shadow;
+    margin: 20px 0;
+
+    img {
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 5px 10px 10px 10px;
+
+      .project-links {
+        a {
+          font-size: 1.3rem;
+          padding: 0px 5px;
+
+          &:last-of-type {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .project-main {
+      padding: 10px;
     }
   }
 }
